@@ -1,4 +1,4 @@
-package get_requests;
+package get_requests.odev;
 
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;

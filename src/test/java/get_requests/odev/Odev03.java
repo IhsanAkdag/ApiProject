@@ -1,4 +1,4 @@
-package get_requests;
+package get_requests.odev;
 
 import base_url.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
@@ -50,10 +50,10 @@ public class Odev03 {
         response.
                 then().
                 statusCode(200).
-                contentType(ContentType.JSON).body("data.email", hasItem("janet.weaver@reqres.in"),
-                        "data.first_name", hasItem("Janet"),
-                        "data.last_name", hasItems("Weaver"),
-                        "support.text",hasItem("To keep ReqRes free, contributions towards server costs are appreciated!"));
+                contentType(ContentType.JSON).body("data.email", equalTo("janet.weaver@reqres.in"),
+                        "data.first_name", equalTo("Janet"),
+                        "data.last_name", equalTo("Weaver"),
+                        "support.text",equalTo("To keep ReqRes free, contributions towards server costs are appreciated!"));
 
     }
 
