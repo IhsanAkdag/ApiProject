@@ -10,7 +10,11 @@ public class JsonPlaceHolderBaseUrl {
     @Before
     public void setUp(){
 
-        specification = new RequestSpecBuilder().setAccept(ContentType.JSON).setBaseUri("https://jsonplaceholder.typicode.com").build();
+        specification = new RequestSpecBuilder()
+                .setContentType(ContentType.JSON) // post , put , patch de kullanmak zorundayiz
+                .setAccept(ContentType.JSON)
+                .setBaseUri("https://jsonplaceholder.typicode.com").build();
 
+        // setContentType(ContentType.JSON) --> post , put , patch yaparken yazmak zorundayiz
     }
 }
